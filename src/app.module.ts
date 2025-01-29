@@ -5,9 +5,10 @@ import { FlowersModule } from './flowers/flowers.module';
 import { FlowersService } from './flowers/flowers.service';
 import { MiddlewareConsumer } from '@nestjs/common';
 import { BasicMiddleware } from './conception/middleware';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
-  imports: [FlowersModule],
+  imports: [FlowersModule, AuthModule],
   controllers: [AppController],
   providers: [AppService, FlowersService],
 })
